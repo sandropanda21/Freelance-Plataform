@@ -1,0 +1,511 @@
+@import url("./global.css");
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cc-black-2);
+  padding: 2rem 11.1rem;
+}
+
+header .logoSearchInpt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+.logo {
+  color: var(--cc-white);
+  font-size: 2rem;
+}
+
+.logo p {
+  font-family: var(--Regular);
+}
+
+.logo span {
+  font-family: var(--Extrabold);
+}
+
+.searchInpt {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 10rem;
+}
+
+.searchInpt input {
+  width: 25rem;
+  height: 4rem;
+  border: none;
+  background-color: var(--cc-gray-2);
+}
+
+.searchInpt input::placeholder {
+  color: var(--cc-white);
+  font-size: 1.2rem;
+  font-family: var(--Medium);
+}
+
+.searchInpt img {
+  position: absolute;
+  left: 22rem;
+}
+
+.searchInpt input[type="search"] {
+  padding: 0 2.2rem 0 2.2rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.8rem;
+}
+
+.links a {
+  color: var(--cc-white-2);
+  font-size: 1.4rem;
+  font-family: var(--Semibold);
+}
+
+.userImage {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: var(--cc-white);
+}
+
+.purpleBg {
+  height: 31.5rem;
+  background-color: var(--cc-violet-2);
+  overflow: visible;
+  display: flex;
+  justify-content: right;
+}
+
+.purpleBg img {
+  position: absolute;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  padding-inline: 5.2rem;
+}
+
+.parabens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  max-width: 59rem;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  background-color: var(--cc-white);
+  margin: -25rem 42.5rem 3.2rem 42.5rem;
+}
+
+.parabens p {
+  color: var(--cc-black-1);
+  font-size: 1.6rem;
+  font-family: var(--Medium);
+}
+
+.parabens p span {
+  color: var(--cc-brand);
+  font-size: 1.6rem;
+  font-family: var(--Bold);
+}
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: #f7f7f5;
+}
+
+.userInfoContainer .userInfo {
+  display: flex;
+  gap: 2.2rem;
+  padding: 3rem 2rem;
+  background-color: var(--cc-white);
+  border: 0.1rem solid var(--cc-black);
+  border-radius: 1rem;
+  width: 80rem;
+}
+
+.userInfo .profilePicture {
+  display: flex;
+  flex-direction: column;
+}
+
+.profilePicture .joiningDay {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--cc-black-1);
+  font-size: 1.2rem;
+  font-family: var(--Medium);
+  margin-block: 1.3rem 0;
+}
+
+.userInfo .userInfoDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfoDesc .userName {
+  display: flex;
+}
+
+.userName .name {
+  display: flex;
+  flex-direction: column;
+  color: var(--cc-black-1);
+}
+
+.name h2 {
+  font-size: 2.6rem;
+  font-family: var(--Bold);
+}
+
+.name p {
+  font-size: 1.4rem;
+  font-family: var(--Medium);
+}
+
+.userName .editBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid var(--cc-brand);
+  border-radius: 10rem;
+  padding: 1.2rem 3.6rem;
+  width: 19.5rem;
+  height: 6rem;
+}
+
+.editBtn a {
+  color: var(--cc-brand);
+  font-size: 1.2rem;
+  font-family: var(--Bold);
+}
+
+.userInfoDesc .reviews {
+  display: flex;
+  align-items: center;
+  margin-block: 2rem 0;
+  gap: 1.1rem;
+}
+
+.reviews .stars p {
+  color: var(--cc-black-1);
+  font-size: 1.4rem;
+  font-family: var(--Medium);
+}
+
+.userInfoDesc .price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-inline: 0.05rem solid black;
+}
+
+.price .cifrao {
+  height: 2.2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 0.1rem 0.6rem;
+  background-color: var(--cc-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1.1rem 0;
+}
+
+.price .priceText {
+  color: var(--cc-black-1);
+  font-size: 1.2rem;
+  font-family: var(--Semibold);
+  gap: 0.2rem;
+  margin-inline: 0 1.1rem;
+}
+
+.priceText p#sm {
+  font-size: 1rem;
+  font-family: var(--Medium);
+}
+
+.userInfoDesc .projects {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.projects .proj {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--cc-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects .projText {
+  color: var(--cc-black-1);
+  font-size: 1.2rem;
+  font-family: var(--Semibold);
+}
+
+.userInfo .userDesc p {
+  color: black;
+  font-size: 1.4rem;
+  font-family: var(--Medium);
+  width: 51.2rem;
+  text-align: justify;
+  margin-block: 2rem 0;
+}
+
+.userInfo .userDesc a {
+  color: var(--cc-brand);
+  font-size: 1.4rem;
+  font-family: var(--Bold);
+}
+
+.userInfoContainer .portfolio,
+.userInfoContainer .review,
+.userInfoContainer .workExperience,
+.userInfoContainer .education {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cc-white);
+  border: 0.1rem solid var(--cc-black);
+  border-radius: 1rem;
+  width: 80rem;
+}
+
+.userInfoContainer .education {
+  margin-block: 0 6rem;
+}
+
+.portfolio .portfolioTop,
+.review .reviewTop,
+.workExperience .workExperienceTop,
+.education .educationTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+
+.portfolio .portfolioTop h2,
+.review .reviewTop h2,
+.workExperience .workExperienceTop h2,
+.education .educationTop h2 {
+  font-size: 2rem;
+  font-family: var(--Bold);
+  color: var(--cc-black-1);
+}
+
+.portfolioTop .btns,
+.workExperienceTop .btns,
+.educationTop .btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.portfolioTop .btns .editPortfolioBtn,
+.workExperienceTop .btns .editExperienceBtn,
+.educationTop .btns .editEducationBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  border: 0.1rem solid var(--cc-brand);
+  padding: 0.6rem 1.2rem;
+}
+
+.editPortfolioBtn a,
+.editExperienceBtn a,
+.editEducationBtn a {
+  color: var(--cc-brand);
+  font-size: 1rem;
+  font-family: var(--Medium);
+}
+
+.portfolio .portfolioProjects,
+.review .reviewContainer {
+  display: flex;
+  align-items: center;
+  padding: 3.6rem 2.5rem 2.5rem 2.5rem;
+  gap: 1.1rem;
+}
+
+.reviewContainer .rev {
+  display: flex;
+  gap: 1.2rem;
+  padding: 2rem 1.3rem;
+  border-radius: 0.4rem;
+  background-color: var(--cc-white-2);
+}
+
+.reviewContainer .rev img {
+  height: 5.8rem;
+  width: 5.8rem;
+  border-radius: 50%;
+}
+
+.rev .revText {
+  color: var(--cc-black);
+}
+
+.rev .revText p {
+  font-size: 1.4rem;
+  font-family: var(--Medium);
+}
+
+.rev .revText p#r {
+  font-size: 1.2rem;
+  text-align: justify;
+  width: 27.5rem;
+  padding-block: 0 1rem;
+}
+
+.rev .revText h3 {
+  font-size: 1.4rem;
+  font-family: var(--Bold);
+  padding-block: 1rem 2rem;
+}
+
+.workExperience .workExp,
+.education .educationExp {
+  display: flex;
+  flex-direction: column;
+}
+
+.workExp h3,
+.educationExp h3 {
+  font-size: 1.4rem;
+  font-family: var(--Bold);
+  margin-block: 2rem;
+  padding-inline: 2.3rem 0;
+}
+
+.workExp p,
+.educationExp p {
+  font-size: 1.4rem;
+  font-family: var(--Medium);
+  padding-inline: 2.3rem 6rem;
+  text-align: justify;
+}
+
+.workExp p#expDetail,
+.educationExp p#educationDetail {
+  margin-block: 1.5rem 3.5rem;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f7f7f5;
+  border-radius: 1rem;
+}
+
+.verification,
+.skill {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cc-white);
+  border: 0.1rem solid var(--cc-black);
+  border-radius: 1rem;
+  width: 39rem;
+  height: 37.6rem;
+}
+
+.verification .verificationTop,
+.skill .skillTop {
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.verification .verificationTop h2,
+.skill .skillTop h2 {
+  color: var(--cc-black-1);
+  font-size: 2rem;
+  font-family: var(--Semibold);
+}
+
+.skillTop .editSkillBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  border: 0.1rem solid var(--cc-brand);
+  padding: 0.6rem 1.2rem;
+}
+
+.skillTop .editSkillBtn a {
+  color: var(--cc-brand);
+  font-size: 1rem;
+  font-family: var(--Medium);
+}
+
+.verification .verificationContainer,
+.skill .skillContainer {
+  padding: 7.5rem 2rem 6rem 2rem;
+}
+
+.verificationContainer .verify {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 0.5rem;
+}
+
+.verificationContainer .verify p,
+.skill .skillContainer p {
+  color: var(--cc-black-1);
+  font-size: 1.6rem;
+  font-family: var(--Medium);
+  margin-inline: 0 0.6rem;
+  width: 20rem;
+}
+
+.skill .skillContainer p {
+  width: 35rem;
+  margin-block: 0 1rem;
+}
+
+.verify .icons {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.verificationContainer .verify a {
+  color: var(--cc-blue);
+  font-size: 1.6rem;
+  font-family: var(--Medium);
+}
+
+.l {
+  height: 0.1rem;
+  background-color: black;
+}
+
+a#seeAll {
+  color: var(--cc-blue);
+  font-size: 1.6rem;
+  font-family: var(--Semibold);
+  text-align: center;
+  padding-bottom: 1.7rem;
+}

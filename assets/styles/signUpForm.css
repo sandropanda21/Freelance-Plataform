@@ -1,0 +1,180 @@
+@import url(./global.css);
+
+body {
+  background-color: var(--cc-white--3);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.8rem 0 2.6rem 12rem;
+  gap: 6rem;
+}
+
+header .logo p {
+  color: var(--cc-brand);
+  font-size: 2rem;
+  font-family: var(--Regular);
+}
+
+header .logo p span {
+  font-family: var(--Extrabold);
+}
+
+.l {
+  height: 0.1rem;
+  background-color: #fef7f7;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0.1rem solid var(--cc-gray);
+  border-radius: 1rem;
+  background-color: var(--cc-white);
+  padding: 4.4rem 13.3rem 12.2rem 13.3rem;
+  margin-block: 4.3rem 6rem;
+}
+
+form h1 {
+  text-align: center;
+  font-family: var(--Semibold);
+  font-size: 3.3rem;
+  color: var(--cc-black-1);
+  margin-block: 0 5.2rem;
+}
+
+form .gmail {
+  display: flex;
+  align-items: center;
+  background-color: var(--cc-violet);
+  padding: 0.6rem 16rem;
+  border-radius: 10rem;
+  gap: 2.1rem;
+}
+
+.gmail .gm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cc-white);
+  padding: 1rem 0.75rem;
+  border-radius: 50%;
+}
+
+form .gmail a {
+  color: var(--cc-white);
+  font-size: 1.6rem;
+  font-family: var(--Semibold);
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.or div.l {
+  height: 1rem;
+  background-color: black;
+}
+
+.userEmailInpt {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 54.3rem;
+  height: 4.5rem;
+  border: 0.1px solid black;
+  border-radius: 1rem;
+  margin-block: 0 3rem;
+}
+
+.userEmailInpt input {
+  width: 54.3rem;
+  border: none;
+}
+
+.userEmailInpt input::placeholder {
+  color: var(--cc-gray-2);
+  font-size: 1.6rem;
+  font-family: var(--Semibold);
+}
+
+.userEmailInpt img {
+  position: absolute;
+  left: 2.2rem;
+}
+
+.userEmailInpt input[type="email"] {
+  padding: 0 4.7rem 0 4.7rem;
+}
+
+.userPasswordInpt {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 54.3rem;
+  height: 4.5rem;
+  border: 0.1px solid black;
+  border-radius: 1rem;
+  margin-block: 0 3rem;
+}
+
+.userPasswordInpt input {
+  width: 54.3rem;
+  border: none;
+}
+
+.userPasswordInpt input::placeholder {
+  color: var(--cc-gray-2);
+  font-size: 1.6rem;
+  font-family: var(--Semibold);
+}
+
+.userPasswordInpt img {
+  position: absolute;
+  left: 2.2rem;
+}
+
+.userPasswordInpt input[type="password"] {
+  padding: 0 4.7rem 0 4.7rem;
+}
+
+.loginBtn {
+  width: 54.3rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
+  font-family: var(--Semibold);
+  cursor: pointer;
+  color: var(--cc-white);
+  border: none;
+  border-radius: 10rem;
+  background-color: var(--cc-brand);
+}
+
+.loginBtn:hover {
+  transform: 1s;
+  background-color: #f55957;
+}
+
+form p {
+  text-align: center;
+  color: var(--cc-black-1);
+  font-size: 1.6rem;
+  font-family: var(--Medium);
+  margin-block: 2.8rem 0;
+}
+
+form a#logIn {
+  color: var(--cc-brand);
+}

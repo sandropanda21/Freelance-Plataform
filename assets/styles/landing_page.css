@@ -1,0 +1,448 @@
+@import url("./global.css");
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.8rem 5rem;
+  gap: 6rem;
+}
+
+header .logo p {
+  color: var(--cc-brand);
+  font-size: 2rem;
+  font-family: var(--Regular);
+}
+
+header .logo p span {
+  font-family: var(--Extrabold);
+}
+
+header .links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  font-family: var(--Medium);
+  font-size: 1.6rem;
+}
+
+header .links a {
+  color: var(--cc-black);
+}
+
+header .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+  font-family: var(--Medium);
+  font-size: 1.6rem;
+}
+
+header #signIn {
+  color: var(--cc-black-1);
+}
+
+header #signUp {
+  font-size: 1.2rem;
+  padding: 1.2rem 3.6rem;
+  border-radius: 10rem;
+  background-color: var(--cc-brand);
+  color: var(--cc-white);
+}
+
+main section .join {
+  display: flex;
+  gap: 5.4rem;
+  align-items: center;
+  background-color: var(--cc-brand);
+  padding-block: 5.4rem;
+}
+
+.join .plantsBack img {
+  height: 26rem;
+  width: 34rem;
+}
+
+.join .joinText {
+  color: var(--cc-white);
+  margin-inline: -30rem 0;
+}
+
+.join .joinText .text h2 {
+  font-family: var(--Bold);
+  font-size: 4.3rem;
+  margin-block: 0 1rem;
+}
+
+.join .joinText .text p {
+  font-family: var(--Medium);
+  margin-block: 0 2.8rem;
+  font-size: 1.6rem;
+}
+
+.join .joinText .joinButtons {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.join .joinText .joinButtons a {
+  color: var(--cc-white);
+}
+
+.joinButtons .findTalent,
+.joinButtons .findWork {
+  display: flex;
+  width: 19.5rem;
+  justify-content: center;
+  font-family: var(--Bold);
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  border-width: 0.1rem;
+  padding: 1.2rem 3.6rem;
+  cursor: pointer;
+}
+
+.joinButtons .findTalent {
+  background-color: var(--cc-black-1);
+}
+
+.joinButtons .findWork {
+  border: solid var(--cc-white);
+  background-color: transparent;
+}
+
+.join .imgs {
+  display: flex;
+  align-items: center;
+}
+
+.imgs .numeros {
+  display: flex;
+  flex-direction: column;
+}
+
+main section .find {
+  display: flex;
+  gap: 3.4rem;
+  align-items: center;
+  overflow-y: hidden;
+  background-color: var(--cc-gray);
+  padding-block: 4.2rem 0;
+}
+
+.find .plantsBack {
+  display: flex;
+  align-items: center;
+}
+
+.plantsBack #img1,
+#img3 {
+  height: 26rem;
+  width: 34rem;
+}
+
+#img2 {
+  margin: 0 0 -10rem 0;
+}
+
+.find .findText {
+  color: var(--cc-black-1);
+  width: 52rem;
+}
+
+.findText h3 {
+  font-family: var(--Bold);
+  font-size: 2.4rem;
+  margin-block: 0 2rem;
+}
+
+.findText p {
+  font-family: var(--Medium);
+  font-size: 2rem;
+  margin-block: 0 2.6rem;
+}
+
+.findButton .findTalent a {
+  display: flex;
+  justify-content: center;
+  width: 19.5rem;
+  font-family: var(--Bold);
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  border-width: 0.1rem;
+  padding: 1.2rem 3.6rem;
+  color: var(--cc-white);
+  background-color: var(--cc-violet);
+  cursor: pointer;
+}
+
+section .topSkill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 5rem 6rem;
+}
+
+section .topSkill h2 {
+  font-family: var(--Bold);
+  font-size: 4.3rem;
+  color: var(--cc-black-1);
+  margin-block: 0 4.8rem;
+}
+
+section .topSkill .skills ul {
+  display: flex;
+  margin-block: 0 4.3rem;
+  gap: 3.7rem;
+  border-bottom: solid 0.1rem var(--cc-black-1);
+}
+
+.skills ul li p {
+  font-family: var(--Semibold);
+  font-size: 1.6rem;
+  color: var(--cc-black);
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.skills ul li p:hover {
+  font-family: var(--Bold);
+  font-size: 1.6rem;
+  color: var(--cc-brand);
+  border-bottom: 0.3rem solid var(--cc-brand);
+  transition-duration: 0.3s;
+}
+
+#categorieDscr {
+  color: var(--cc-black);
+  font-family: var(--Medium);
+  font-size: 2rem;
+  text-align: center;
+  width: 50rem;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.8rem 14rem 2.8rem;
+  gap: 2rem;
+}
+
+.cards .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 4.4rem;
+  width: 4.4rem;
+  background-color: var(--cc-violet);
+}
+
+.cards .cardsContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.cardsContainer .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  margin-block: 0 -10rem;
+  z-index: 1;
+}
+
+.card .cardText {
+  width: 28.5rem;
+  height: 28.5rem;
+  border-radius: 3rem;
+  background-image: linear-gradient(to bottom, var(--cc-violet), #253d9c);
+}
+
+.card .cardText:nth-last-child(even) {
+  background-image: linear-gradient(to bottom, #1f1f1f, #292929);
+}
+
+.cardText .text h4 {
+  font-size: 1.2rem;
+  font-family: var(--Regular);
+  border-radius: 0.4rem;
+  background-color: #3859bf;
+  color: var(--cc-white);
+  margin: 12rem 0 1rem 2.3rem;
+  padding: 0.2rem 1.4rem;
+  width: 16rem;
+}
+
+.cardText .text p {
+  font-size: 2.3rem;
+  font-family: var(--Merriweather);
+  color: var(--cc-white);
+  margin-inline: 2.3rem 0;
+  width: 17rem;
+}
+
+.adversement {
+  display: flex;
+  background-color: var(--cc-rose);
+  align-items: center;
+  margin-block: 0 5rem;
+}
+
+.adversement .plantaR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: -26rem 0;
+  overflow: hidden;
+}
+
+.adversement .plantaR img {
+  width: 21.5rem;
+  height: 16.5rem;
+}
+
+.adversement .plantaL {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 0 -22.8rem;
+  overflow: hidden;
+}
+
+.adversement .plantaL img {
+  width: 25.2rem;
+  height: 19.5rem;
+}
+
+.ads {
+  display: flex;
+  align-items: center;
+  margin-block: 8.1rem 4.1rem;
+  gap: 2.3rem;
+}
+
+.ads .adsImg img {
+  width: 39.5rem;
+  height: 30rem;
+}
+
+.ads .adsText h3 {
+  font-family: var(--Bold);
+  font-size: 2.4rem;
+  margin-block: 0 3rem;
+}
+
+.ads .adsText p {
+  font-family: var(--Medium);
+  font-size: 2rem;
+  margin-block: 0 3.2rem;
+  width: 52rem;
+  text-align: justify;
+}
+
+.adsText .div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adsText .findOpportunite a {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  font-family: var(--Bold);
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  border-width: 0.1rem;
+  padding: 1.2rem 3.6rem;
+  color: var(--cc-white);
+  background-color: var(--cc-violet);
+  cursor: pointer;
+}
+
+.whyUs {
+  display: flex;
+  flex-direction: column;
+  margin-block: 0 7.1rem;
+}
+
+.whyUs .whyUsText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block: 0 5.4rem;
+}
+
+.whyUsText h2 {
+  font-family: var(--Bold);
+  font-size: 4.5rem;
+  margin-block: 0 2rem;
+}
+
+.whyUsText p {
+  font-family: var(--Medium);
+  font-size: 2rem;
+  text-align: center;
+  color: var(--cc-black-1);
+  width: 51.8rem;
+}
+
+.whyUs .whyUsImg {
+  display: flex;
+  align-items: center;
+}
+
+.whyUsImg .img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-inline: 10rem 12rem;
+  color: #001730;
+}
+
+.whyUsImg .img img#I {
+  width: 8.716rem;
+  height: 13.42rem;
+  margin-block: 0 1.8rem;
+}
+
+.whyUsImg .img img#II {
+  width: 13.6rem;
+  height: 12rem;
+  margin-block: 0 2.4rem;
+}
+
+.whyUsImg .img img#III {
+  width: 13.6rem;
+  height: 9.1rem;
+  margin-block: 0 2.5rem;
+}
+
+.whyUsImg .img h3 {
+  font-family: var(--Semibold);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-block: 0 3.6rem;
+}
+
+.whyUsImg .img p#III {
+  margin-block: 1.6rem 0;
+}
+
+.whyUsImg .img p {
+  font-family: var(--Medium);
+  font-size: 2rem;
+  text-align: center;
+  width: 38rem;
+}
+
+

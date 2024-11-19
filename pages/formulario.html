@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Múltiplas Etapas</title>
+  <style>
+    /* CSS Básico para o formulário */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Indicador de progresso */
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .progress-step {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    .progress-step.active {
+      background-color: #4CAF50;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .alert {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .modal-content button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="progress-bar">
+      <div class="progress-step" data-step="1">1</div>
+      <div class="progress-step" data-step="2">2</div>
+      <div class="progress-step" data-step="3">3</div>
+    </div>
+
+    <form id="multiStepForm">
+      <!-- Etapa 1 -->
+      <div class="step active" data-step="1">
+        <h3>Etapa 1</h3>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <p class="alert">Por favor, preencha este campo.</p>
+      </div>
+
+      <!-- Etapa 2 -->
+      <div class="step" data-step="2">
+        <h3>Etapa 2</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <p class="alert">Por favor, preencha este campo.</p>
+      </div>
+
+      <!-- Etapa 3 -->
+      <div class="step" data-step="3">
+        <h3>Etapa 3</h3>
+        <label for="phone">Telefone:</label>
+        <input type="text" id="phone" name="phone" required>
+        <p class="alert">Por favor, preencha este campo.</p>
+      </div>
+
+      <div class="buttons">
+        <button type="button" onclick="prevStep()">Voltar</button>
+        <button type="button" onclick="nextStep()">Próximo</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal de Sucesso -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <h2>Cadastro realizado com sucesso!</h2>
+      <button onclick="redirectHome()">Ir para a Home</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+
+    function showStep(step) {
+      document.querySelectorAll('.step').forEach((element) => {
+        element.classList.remove('active');
+      });
+      document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+
+      updateProgress(step);
+      toggleButtons(step);
+    }
+
+    function updateProgress(step) {
+      document.querySelectorAll('.progress-step').forEach((stepElement, index) => {
+        stepElement.classList.toggle('active', index < step);
+      });
+    }
+
+    function nextStep() {
+      const currentFields = document.querySelectorAll(`.step[data-step="${currentStep}"] input`);
+      let allFilled = true;
+
+      currentFields.forEach((field) => {
+        const alertMessage = field.nextElementSibling;
+        if (field.value === "") {
+          alertMessage.style.display = "block";
+          allFilled = false;
+        } else {
+          alertMessage.style.display = "none";
+        }
+      });
+
+      if (allFilled) {
+        currentStep++;
+        if (currentStep > 3) {
+          showModal();
+        } else {
+          showStep(currentStep);
+        }
+      }
+    }
+
+    function prevStep() {
+      currentStep--;
+      if (currentStep < 1) currentStep = 1;
+      showStep(currentStep);
+    }
+
+    function toggleButtons(step) {
+      const prevButton = document.querySelector('.buttons button:first-child');
+      const nextButton = document.querySelector('.buttons button:last-child');
+
+      prevButton.style.display = step === 1 ? 'none' : 'inline-block';
+      nextButton.innerHTML = step === 3 ? 'Finalizar' : 'Próximo';
+    }
+
+    function showModal() {
+      document.getElementById("successModal").style.display = "flex";
+    }
+
+    function redirectHome() {
+      window.location.href = "home.html"; // Mude para a URL desejada para a página inicial
+    }
+
+    document.querySelectorAll('input').forEach((input) => {
+      input.addEventListener('input', () => {
+        const alertMessage = input.nextElementSibling;
+        if (input.value !== "") {
+          alertMessage.style.display = "none";
+        }
+      });
+    });
+
+    // Inicializa o estado dos botões na primeira etapa
+    toggleButtons(currentStep);
+  </script>
+</body>
+</html>

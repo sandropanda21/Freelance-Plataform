@@ -1,0 +1,76 @@
+@import url("./fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --Regular: "Monteserrat-regular";
+  --Bold: "Monteserrat-bold";
+  --Extrabold: "Monteserrat-extrabold";
+  --Medium: "Monteserrat-medium";
+  --Black: "Monteserrat-black";
+  --Semibold: "Monteserrat-semibold";
+  --Merriweather: "Merriweather";
+
+  --cc-brand: #ff4c4a;
+  --cc-black: #333333;
+  --cc-black-1: #2a1e17;
+  --cc-black-2: #1f1f1f;
+  --cc-white: #ffffff;
+  --cc-white-2: #f2f2f2;
+  --cc-white-3: #f7f7f5;
+  --cc-violet: #4260da;
+  --cc-violet-2: #2942a5;
+  --cc-gray: #dde1f3;
+  --cc-gray-2: #494a4d;
+  --cc-rose: #ffe4e3;
+  --cc-blue: #4285f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 9rem 12rem;
+  background-color: var(--cc-black-2);
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+}
+
+section h4 {
+  font-family: var(--Extrabold);
+  font-size: 1.2rem;
+  color: var(--cc-white);
+  margin-block: 0 0.8rem;
+}
+
+section a {
+  font-family: var(--Semibold);
+  font-size: 1.2rem;
+  color: var(--cc-white);
+  text-decoration: none;
+  line-height: 3.4rem;
+}
